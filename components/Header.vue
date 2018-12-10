@@ -5,7 +5,7 @@
   >
     <div class="container">
       <div class="header__row">
-        <p class="header__logo">UPDATE</p>
+        <p class="header__logo"><nuxt-link to="/">UPDATE</nuxt-link></p>
         <nav class="header__menu">
           <nuxt-link to="/">Top</nuxt-link>
           <nuxt-link to="/about">About</nuxt-link>

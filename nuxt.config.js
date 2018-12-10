@@ -23,12 +23,47 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description },
       {
+        hid: 'og:title',
         property: 'og:title',
-        content: 'Test title',
+        content: 'Site',
         template: chunk => {
           return chunk ? `${chunk} - Site` : 'Site'
-        },
-        hid: 'og:title'
+        }
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website'
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: ''
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: ''
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'Site'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'Site'
+      },
+      {
+        hid: 'fb:app_id',
+        property: 'fb:app_id',
+        content: ''
+      },
+      {
+        hid: 'twitter:card',
+        property: 'twitter:card',
+        content: 'summary' // or summarylargeimage, photo, gallery, app
       }
     ],
     link: [

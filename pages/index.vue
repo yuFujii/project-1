@@ -83,7 +83,7 @@
     <section class="concept">
       <div class="container">
         <div class="concept__body">
-          <p class="concept__title">Lorem, ipsum dolor.</p>
+          <h2 class="concept__title">Lorem, ipsum dolor.</h2>
           <p class="concept__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aliquid alias, aperiam fuga dolorem sit vitae rerum similique! Vel maiores suscipit in enim laborum itaque eligendi fugiat neque ut ratione.</p>
           <div class="concept__btn">
             <nuxt-link

@@ -9,7 +9,8 @@
         <nav class="header__menu">
           <nuxt-link to="/">Top</nuxt-link>
           <nuxt-link to="/about">About</nuxt-link>
-          <nuxt-link to="/contact">Contact</nuxt-link>
+          <span class="disabled">Recruit</span>
+          <span class="disabled">Contact</span>
         </nav>
       </div>
     </div>
@@ -29,11 +30,15 @@
   }
   &__menu {
     display: flex;
-    a {
+    a,
+    span {
       line-height: 64px;
       padding: 0 24px;
       display: block;
       position: relative;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
       &.nuxt-link-exact-active {
         &:after {
           content: '';
@@ -46,6 +51,9 @@
           background: #000;
         }
       }
+    }
+    .disabled {
+      opacity: 0.3;
     }
   }
 }

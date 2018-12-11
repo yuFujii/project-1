@@ -197,11 +197,26 @@
         </ul>
       </div>
     </section>
+
+    <section v-if="data">
+      <img
+        :src="data.avatar"
+        alt=""
+      >
+      <p>{{ data.first_name }} {{ data.last_name }}</p>
+    </section>
   </main>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
+  async asyncData({ params }) {
+    let { data } = await axios.get(`https://reqres.in/api/users/2`)
+    return data
+  },
+
   head() {
     return {
       title: 'Top',
@@ -217,7 +232,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .hero {
   background: #000;
   color: #ffffff;
@@ -242,14 +257,6 @@ export default {
   margin-bottom: 80px;
   &__item {
     height: 300px;
-  }
-}
-
-.VueCarousel-dot {
-  opacity: 0.3;
-  transition: 0.3s;
-  &--active {
-    opacity: 1;
   }
 }
 

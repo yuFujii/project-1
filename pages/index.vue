@@ -203,7 +203,9 @@
         :src="data.avatar"
         alt=""
       >
-      <p>{{ data.first_name }} {{ data.last_name }}</p>
+      <no-ssr>
+        <p>{{ data.first_name }} {{ data.last_name }}</p>
+      </no-ssr>
     </section>
   </main>
 </template>

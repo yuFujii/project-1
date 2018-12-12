@@ -298,6 +298,8 @@ export default {
 
 .news {
   padding: 0;
+  display: grid;
+  grid-gap: 32px;
   &__title {
     margin-bottom: 4px;
     font-size: 16px;
@@ -305,7 +307,6 @@ export default {
   }
   &__description {
     font-size: 13px;
-    margin-bottom: 16px;
   }
   &__date {
     font-size: 13px;
@@ -316,13 +317,12 @@ export default {
     display: grid;
     grid-gap: 24px;
     grid-auto-flow: column;
-    margin-bottom: 24px;
     @media screen and (max-width: 700px) {
       grid-gap: 16px;
     }
   }
   &__thumbnail {
-    background: #000;
+    background: #000 center/cover;
     border-radius: 12px;
     width: 100px;
     height: 100px;

@@ -96,10 +96,7 @@
     </section>
     <section class="section">
       <div class="container">
-        <h2
-          class="hdg"
-          data-aos="zoom-out-right"
-        >PRICE</h2>
+        <h2 class="hdg">PRICE</h2>
 
         <table class="tbl">
           <caption class="tbl__caption">Superheros and sidekicks</caption>
@@ -149,7 +146,10 @@
 
     <section class="section voice-section">
       <div class="container">
-        <div class="voice">
+        <div
+          class="voice"
+          data-aos="flip-down"
+        >
           <figure class="voice__thumbnail" />
           <div class="voice__body">
             <h2 class="voice__title">Taro Yamada</h2>

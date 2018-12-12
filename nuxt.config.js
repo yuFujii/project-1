@@ -90,6 +90,7 @@ module.exports = {
   */
   plugins: [
     { src: '~/plugins/vue-carousel.js', ssr: false },
+    { src: '~/plugins/aos.js', ssr: false },
     { src: '~/plugins/vue-scrollto.js', ssr: false }
   ],
 

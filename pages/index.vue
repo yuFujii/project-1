@@ -96,7 +96,10 @@
     </section>
     <section class="section">
       <div class="container">
-        <h2 class="hdg">PRICE</h2>
+        <h2
+          class="hdg"
+          data-aos="zoom-out-right"
+        >PRICE</h2>
 
         <table class="tbl">
           <caption class="tbl__caption">Superheros and sidekicks</caption>

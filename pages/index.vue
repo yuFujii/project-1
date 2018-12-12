@@ -203,9 +203,6 @@
         :src="data.avatar"
         alt=""
       >
-      <no-ssr>
-        <p>{{ data.first_name }} {{ data.last_name }}</p>
-      </no-ssr>
     </section>
   </main>
 </template>
@@ -215,7 +212,7 @@ import axios from 'axios'
 
 export default {
   async asyncData({ params }) {
-    let { data } = await axios.get(`https://reqres.in/api/users/2`)
+    const { data } = await axios.get(`https://reqres.in/api/users/2`)
     return data
   },
 

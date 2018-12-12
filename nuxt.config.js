@@ -71,6 +71,10 @@ module.exports = {
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Noto+Sans+JP'
       }
     ]
   },

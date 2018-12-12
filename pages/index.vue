@@ -220,7 +220,7 @@ export default {
 
 <style lang="scss">
 .hero {
-  background: #000;
+  background: #000 url(~assets/imgs/hero.jpg) center/cover;
   color: #ffffff;
   &__title {
     font-size: 32px;

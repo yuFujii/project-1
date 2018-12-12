@@ -102,50 +102,42 @@
           <caption class="tbl__caption">Superheros and sidekicks</caption>
           <colgroup>
             <col>
-            <col
-              span="2"
-              class="batman">
-            <col
-              span="2"
-              class="flash">
+            <col>
+            <col>
+            <col>
           </colgroup>
           <thead>
             <tr>
               <td />
-              <th scope="col">Batman</th>
-              <th scope="col">Robin</th>
-              <th scope="col">The Flash</th>
-              <th scope="col">Kid Flash</th>
+              <th scope="col">Free</th>
+              <th scope="col">Basic</th>
+              <th scope="col">Stundard</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Skill</th>
-              <td>Smarts</td>
-              <td>Dex, acrobat</td>
-              <td>Super speed</td>
-              <td>Super speed</td>
+              <th scope="row">Point</th>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
             </tr>
             <tr>
-              <th scope="row">Skill</th>
-              <td>Smarts</td>
-              <td>Dex, acrobat</td>
-              <td>Super speed</td>
-              <td>Super speed</td>
+              <th scope="row">Point</th>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
             </tr>
             <tr>
-              <th scope="row">Skill</th>
-              <td>Smarts</td>
-              <td>Dex, acrobat</td>
-              <td>Super speed</td>
-              <td>Super speed</td>
+              <th scope="row">Point</th>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
             </tr>
             <tr>
-              <th scope="row">Skill</th>
-              <td>Smarts</td>
-              <td>Dex, acrobat</td>
-              <td>Super speed</td>
-              <td>Super speed</td>
+              <th scope="row">Point</th>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
             </tr>
           </tbody>
         </table>
@@ -197,13 +189,6 @@
         </ul>
       </div>
     </section>
-
-    <section v-if="data">
-      <img
-        :src="data.avatar"
-        alt=""
-      >
-    </section>
   </main>
 </template>
 
@@ -218,7 +203,6 @@ export default {
 
   head() {
     return {
-      title: 'Top',
       meta: [
         {
           hid: 'description',
@@ -256,6 +240,9 @@ export default {
   margin-bottom: 80px;
   &__item {
     height: 300px;
+    @media screen and (max-width: 700px) {
+      height: 150px;
+    }
   }
 }
 
@@ -307,6 +294,7 @@ export default {
 }
 
 .news {
+  padding: 0;
   &__title {
     margin-bottom: 4px;
     font-size: 16px;
@@ -326,12 +314,19 @@ export default {
     grid-gap: 24px;
     grid-auto-flow: column;
     margin-bottom: 24px;
+    @media screen and (max-width: 700px) {
+      grid-gap: 16px;
+    }
   }
   &__thumbnail {
     background: #000;
     border-radius: 12px;
     width: 100px;
     height: 100px;
+    @media screen and (max-width: 700px) {
+      width: 60px;
+      height: 60px;
+    }
   }
 }
 
@@ -341,14 +336,24 @@ export default {
   display: flex;
   overflow: hidden;
   box-shadow: 0 0 16px #ddd;
+  @media screen and (max-width: 700px) {
+    display: block;
+  }
   &__thumbnail {
     width: 50%;
     height: 500px;
     background: #000;
+    @media screen and (max-width: 700px) {
+      width: 100%;
+      height: 230px;
+    }
   }
   &__body {
     padding: 64px;
     flex: 1;
+    @media screen and (max-width: 700px) {
+      padding: 32px;
+    }
   }
   &__title {
     margin-bottom: 8px;

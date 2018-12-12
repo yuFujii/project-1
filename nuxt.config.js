@@ -13,7 +13,7 @@ module.exports = {
   head: {
     title: '',
     titleTemplate: titleChunk => {
-      return titleChunk ? `${titleChunk} - Site` : 'Site'
+      return titleChunk ? `${titleChunk} - Mock` : 'Mock'
     },
     htmlAttrs: {
       lang: 'ja'
@@ -25,15 +25,15 @@ module.exports = {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: 'Site',
+        content: 'Mock',
         template: chunk => {
-          return chunk ? `${chunk} - Site` : 'Site'
+          return chunk ? `${chunk} - Mock` : 'Mock'
         }
       },
       {
         hid: 'og:type',
         property: 'og:type',
-        content: 'website'
+        content: 'webMock'
       },
       {
         hid: 'og:url',
@@ -46,14 +46,14 @@ module.exports = {
         content: ''
       },
       {
-        hid: 'og:site_name',
-        property: 'og:site_name',
-        content: 'Site'
+        hid: 'og:Mock_name',
+        property: 'og:Mock_name',
+        content: 'Mock'
       },
       {
         hid: 'og:description',
         property: 'og:description',
-        content: 'Site'
+        content: 'Mock'
       },
       {
         hid: 'fb:app_id',

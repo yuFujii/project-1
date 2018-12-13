@@ -7,7 +7,7 @@
       <div class="header__row">
         <button
           class="header-menu-trg"
-          @click="toggle()"
+          @click="toggle"
         ><i class="material-icons">menu</i></button>
         <p class="header__logo"><nuxt-link to="/">Mock</nuxt-link></p>
         <nav
@@ -22,7 +22,7 @@
         <div
           :class="{ opened: isOpen }"
           class="header-menu-back"
-          @click="toggle()"
+          @click="toggle"
         />
       </div>
     </div>

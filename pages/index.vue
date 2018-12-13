@@ -83,7 +83,7 @@
     <section class="concept">
       <div class="container">
         <div class="concept__body">
-          <h2 class="concept__title">Lorem, ipsum dolor.</h2>
+          <h2 class="concept__title">CONCEPT</h2>
           <p class="concept__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aliquid alias, aperiam fuga dolorem sit vitae rerum similique! Vel maiores suscipit in enim laborum itaque eligendi fugiat neque ut ratione.</p>
           <div class="concept__btn">
             <nuxt-link
@@ -117,25 +117,25 @@
           <tbody>
             <tr>
               <th scope="row">Point</th>
-              <td>-</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <th scope="row">Point</th>
-              <td>-</td>
+              <td><i class="material-icons">check</i></td>
               <td>-</td>
               <td>-</td>
             </tr>
             <tr>
               <th scope="row">Point</th>
-              <td>-</td>
+              <td><i class="material-icons">check</i></td>
               <td>-</td>
               <td>-</td>
             </tr>
             <tr>
               <th scope="row">Point</th>
+              <td><i class="material-icons">check</i></td>
               <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row">Point</th>
+              <td><i class="material-icons">check</i></td>
               <td>-</td>
               <td>-</td>
             </tr>
@@ -190,6 +190,58 @@
             </div>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="hdg">FAQ</h2>
+        <no-ssr>
+          <tabs>
+            <tab name="First tab">
+              <div class="faq">
+                <p class="faq__q">Lorem ipsum dolor sit amet.</p>
+                <p class="faq__a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut hic atque harum velit minus mollitia reprehenderit quis iure illum optio eos voluptatem consectetur, temporibus reiciendis in adipisci saepe accusamus rem?</p>
+              </div>
+              <div class="faq">
+                <p class="faq__q">Lorem ipsum dolor sit amet.</p>
+                <p class="faq__a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut hic atque harum velit minus mollitia reprehenderit quis iure illum optio eos voluptatem consectetur, temporibus reiciendis in adipisci saepe accusamus rem?</p>
+              </div>
+              <div class="faq">
+                <p class="faq__q">Lorem ipsum dolor sit amet.</p>
+                <p class="faq__a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut hic atque harum velit minus mollitia reprehenderit quis iure illum optio eos voluptatem consectetur, temporibus reiciendis in adipisci saepe accusamus rem?</p>
+              </div>
+            </tab>
+            <tab name="Second tab">
+              <div class="faq">
+                <p class="faq__q">Lorem ipsum dolor sit amet.</p>
+                <p class="faq__a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut hic atque harum velit minus mollitia reprehenderit quis iure illum optio eos voluptatem consectetur, temporibus reiciendis in adipisci saepe accusamus rem?</p>
+              </div>
+              <div class="faq">
+                <p class="faq__q">Lorem ipsum dolor sit amet.</p>
+                <p class="faq__a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut hic atque harum velit minus mollitia reprehenderit quis iure illum optio eos voluptatem consectetur, temporibus reiciendis in adipisci saepe accusamus rem?</p>
+              </div>
+              <div class="faq">
+                <p class="faq__q">Lorem ipsum dolor sit amet.</p>
+                <p class="faq__a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut hic atque harum velit minus mollitia reprehenderit quis iure illum optio eos voluptatem consectetur, temporibus reiciendis in adipisci saepe accusamus rem?</p>
+              </div>
+            </tab>
+            <tab name="Third tab">
+              <div class="faq">
+                <p class="faq__q">Lorem ipsum dolor sit amet.</p>
+                <p class="faq__a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut hic atque harum velit minus mollitia reprehenderit quis iure illum optio eos voluptatem consectetur, temporibus reiciendis in adipisci saepe accusamus rem?</p>
+              </div>
+              <div class="faq">
+                <p class="faq__q">Lorem ipsum dolor sit amet.</p>
+                <p class="faq__a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut hic atque harum velit minus mollitia reprehenderit quis iure illum optio eos voluptatem consectetur, temporibus reiciendis in adipisci saepe accusamus rem?</p>
+              </div>
+              <div class="faq">
+                <p class="faq__q">Lorem ipsum dolor sit amet.</p>
+                <p class="faq__a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut hic atque harum velit minus mollitia reprehenderit quis iure illum optio eos voluptatem consectetur, temporibus reiciendis in adipisci saepe accusamus rem?</p>
+              </div>
+            </tab>
+          </tabs>
+        </no-ssr>
       </div>
     </section>
   </main>
@@ -303,6 +355,7 @@ export default {
     font-weight: bold;
     font-size: 24px;
     margin-bottom: 24px;
+    letter-spacing: 1px;
   }
   &__description {
     font-size: 13px;
@@ -389,5 +442,50 @@ export default {
 
 .voice-section {
   background: #fafafa;
+}
+
+.tabs-component-tabs {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.tabs-component-tab {
+  border-bottom: 4px solid transparent;
+  &.is-active {
+    border-bottom-color: #000;
+  }
+}
+
+.tabs-component-tab-a {
+  padding: 8px 16px;
+  display: block;
+}
+
+.faq {
+  padding: 24px 0;
+  & + & {
+    border-top: 1px solid #eee;
+  }
+  &__q {
+    padding-left: 1em;
+    text-indent: -1em;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    &:before {
+      content: 'Q. ';
+    }
+  }
+  &__a {
+    padding-left: 1em;
+    text-indent: -1em;
+    opacity: 0.6;
+    &:before {
+      content: 'A. ';
+    }
+  }
 }
 </style>

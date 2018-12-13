@@ -54,6 +54,8 @@ export default {
   z-index: 10;
   &__logo {
     font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
   }
   &__row {
     display: flex;

@@ -19,7 +19,8 @@
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0",
     "vue-carousel": "^0.16.1",
-    "vue-scrollto": "^2.13.0"
+    "vue-scrollto": "^2.13.0",
+    "vue-tabs-component": "^1.5.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

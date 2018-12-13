@@ -8,9 +8,9 @@
     </a>
     <footer class="footer">
       <div class="container">
-        <nav class="footer-nav">
-          <div class="footer-nav__col">
-            <h3 class="footer-nav__title">Pages</h3>
+        <div class="footer-grid">
+          <nav class="footer-nav">
+            <h3 class="footer-nav__title">PAGES</h3>
             <nuxt-link
               to="/"
               class="footer-nav__link"
@@ -27,9 +27,9 @@
               to=""
               class="footer-nav__link footer-nav__link--disabled"
             >Contact</span>
-          </div>
-          <div class="footer-nav__col">
-            <h3 class="footer-nav__title">Other</h3>
+          </nav>
+          <nav class="footer-nav">
+            <h3 class="footer-nav__title">OTHER</h3>
             <span
               to=""
               class="footer-nav__link footer-nav__link--disabled"
@@ -38,9 +38,16 @@
               to=""
               class="footer-nav__link footer-nav__link--disabled"
             >Help</span>
+          </nav>
+          <div class="footer-company">
+            <div class="footer-company__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103716.78149427827!2d139.6401769282195!3d35.67332262044678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x605d1b87f02e57e7%3A0x2e01618b22571b89!2z5p2x5Lqs6YO9!5e0!3m2!1sja!2sjp!4v1544604493310"
+                allowfullscreen />
+            </div>
           </div>
-        </nav>
-        <p>&copy; Mock.</p>
+          <p class="footer-copy">&copy; Mock.</p>
+        </div>
       </div>
     </footer>
   </div>
@@ -57,19 +64,49 @@
   }
 }
 
-.footer-nav {
+.footer-copy {
+  grid-column: 1 / 4;
+  @media screen and (max-width: 700px) {
+    grid-column: 1 / 3;
+  }
+}
+
+.footer-company {
+  &__map {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+    display: block;
+    iframe {
+      border: none;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    grid-column: 1 / 3;
+  }
+}
+
+.footer-grid {
   display: grid;
-  grid-gap: 24px;
-  grid-template-columns: repeat(2, 200px);
-  margin-bottom: 100px;
-  text-align: left;
+  grid-gap: 100px 24px;
+  grid-template-columns: 200px 200px 1fr;
   @media screen and (max-width: 700px) {
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 50px;
+    grid-gap: 48px 24px;
   }
+}
+
+.footer-nav {
+  text-align: left;
   &__title {
     font-weight: bold;
     margin-bottom: 16px;
+    font-size: 16px;
   }
   &__link {
     display: block;

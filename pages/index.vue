@@ -220,7 +220,7 @@ export default {
 
 <style lang="scss">
 .hero {
-  background: #000 url(~assets/imgs/hero.jpg) center/cover;
+  background: #000 url(~assets/imgs/dummy.png) center/cover;
   color: #ffffff;
   &__title {
     font-size: 32px;
@@ -271,6 +271,20 @@ export default {
   background: #000;
   color: #ffffff;
   padding: 200px 0;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to left, rgba(#000, 0.8), rgba(#000, 0));
+    @media screen and (max-width: 700px) {
+      background: linear-gradient(to top, rgba(#000, 0.8), rgba(#000, 0));
+    }
+  }
   @media screen and (max-width: 700px) {
     padding: 40px 0;
   }
@@ -278,6 +292,7 @@ export default {
     display: flex;
     flex-flow: column;
     padding-left: 50%;
+    position: relative;
     @media screen and (max-width: 700px) {
       padding-left: 0;
       padding-top: 200px;
@@ -345,7 +360,7 @@ export default {
   &__thumbnail {
     width: 50%;
     height: 500px;
-    background: #000;
+    background: #000 center/cover;
     @media screen and (max-width: 700px) {
       width: 100%;
       height: 230px;
@@ -360,6 +375,11 @@ export default {
   }
   &__title {
     margin-bottom: 8px;
+    font-size: 32px;
+    text-transform: uppercase;
+    @media screen and (max-width: 700px) {
+      font-size: 24px;
+    }
   }
   &__sub-title {
     margin-bottom: 16px;

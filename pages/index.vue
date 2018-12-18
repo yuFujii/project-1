@@ -277,7 +277,6 @@ export default {
   &__title {
     font-size: 32px;
     font-weight: bold;
-    letter-spacing: 2px;
     margin-bottom: 24px;
   }
   &__content {
@@ -406,7 +405,6 @@ export default {
   background: #fff;
   display: flex;
   overflow: hidden;
-  box-shadow: 0 0 16px #ddd;
   @media screen and (max-width: 700px) {
     display: block;
   }

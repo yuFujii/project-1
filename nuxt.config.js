@@ -33,7 +33,7 @@ module.exports = {
       {
         hid: 'og:type',
         property: 'og:type',
-        content: 'webMock'
+        content: 'website'
       },
       {
         hid: 'og:url',
@@ -46,8 +46,8 @@ module.exports = {
         content: ''
       },
       {
-        hid: 'og:Mock_name',
-        property: 'og:Mock_name',
+        hid: 'og:site_name',
+        property: 'og:site_name',
         content: 'Mock'
       },
       {

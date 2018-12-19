@@ -101,6 +101,7 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
+    '@nuxtjs/pwa',
     '@nuxtjs/sitemap'
   ],
   /*
@@ -142,5 +143,10 @@ module.exports = {
     generate: true,
     exclude: [],
     routes: []
+  },
+
+  manifest: {
+    name: 'My Awesome App',
+    lang: 'ja'
   }
 }

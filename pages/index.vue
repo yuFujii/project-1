@@ -468,6 +468,7 @@ export default {
     border-top: 1px solid #eee;
   }
   &__q {
+    color: red;
     padding-left: 1em;
     text-indent: -1em;
     font-size: 16px;

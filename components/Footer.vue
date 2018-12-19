@@ -128,11 +128,5 @@
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  box-shadow: 0 2px 8px rgba(#333, 0.3);
-  cursor: pointer;
-  transition: 0.5s;
-  &:hover {
-    transform: translateY(-10px);
-  }
 }
 </style>

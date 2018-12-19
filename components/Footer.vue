@@ -47,7 +47,6 @@
             </div>
           </div>
           <div class="footer-bottom">
-            <p class="footer-credit"><a href="https://www.vecteezy.com">Design Credits: www.Vecteezy.com</a></p>
             <p class="footer-copy">&copy; Mock.</p>
           </div>
         </div>
@@ -72,12 +71,6 @@
   @media screen and (max-width: 700px) {
     grid-column: 1 / 3;
   }
-}
-
-.footer-credit {
-  font-size: 12px;
-  color: #cccccc;
-  margin-bottom: 16px;
 }
 
 .footer-company {

@@ -21,7 +21,8 @@
     "nuxt": "^2.0.0",
     "vue-carousel": "^0.16.1",
     "vue-scrollto": "^2.13.0",
-    "vue-tabs-component": "^1.5.0"
+    "vue-tabs-component": "^1.5.0",
+    "vue2-collapse": "^1.0.15"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

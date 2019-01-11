@@ -197,15 +197,6 @@
       <div class="container">
         <h2 class="hdg">FAQ</h2>
 
-        <v-collapse-wrapper>
-          <div v-collapse-toggle>
-            <p class="faq__q">Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div v-collapse-content>
-            <p class="faq__a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut hic atque harum velit minus mollitia reprehenderit quis iure illum optio eos voluptatem consectetur, temporibus reiciendis in adipisci saepe accusamus rem?</p>
-          </div>
-        </v-collapse-wrapper>
-
         <no-ssr>
           <tabs>
             <tab name="First tab">
@@ -264,6 +255,22 @@ export default {
   async asyncData({ params }) {
     const { data } = await axios.get(`https://reqres.in/api/users/2`)
     return data
+  },
+
+  data: function() {
+    return {
+      activeFaq: 0,
+      faq: [
+        {
+          q: 'faq1',
+          a: 'answer1'
+        },
+        {
+          q: 'faq2',
+          a: 'answer2'
+        }
+      ]
+    }
   },
 
   head() {
@@ -492,6 +499,7 @@ export default {
     padding-left: 1em;
     text-indent: -1em;
     opacity: 0.6;
+    transition: 0.3s;
     &:before {
       content: 'A. ';
     }

@@ -91,7 +91,6 @@ module.exports = {
     { src: '~/plugins/vue-carousel.js', ssr: false },
     { src: '~/plugins/aos.js', ssr: false },
     { src: '~/plugins/vue-tabs-component.js', ssr: false },
-    { src: '~/plugins/vue-collapse.js', ssr: false },
     { src: '~/plugins/vue-scrollto.js', ssr: false }
   ],
 

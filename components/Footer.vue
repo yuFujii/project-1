@@ -55,7 +55,7 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .footer {
   text-align: center;
   font-size: 12px;

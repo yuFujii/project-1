@@ -152,7 +152,7 @@
         >
           <figure class="voice__thumbnail" />
           <div class="voice__body">
-            <h2 class="voice__title">Taro Yamada</h2>
+            <h2 class="voice__title">{{ user.first_name }}</h2>
             <p class="voice__sub-title">CEO</p>
             <p class="voice__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nostrum fuga cupiditate doloribus animi dolorum amet dolorem repudiandae quisquam dolore possimus corrupti voluptates aliquid quos ratione cum, eius facere necessitatibus.</p>
           </div>
@@ -165,27 +165,15 @@
         <h2 class="hdg">NEWS</h2>
 
         <ul class="news">
-          <li class="news__item">
+          <li
+            v-for="item in news"
+            :key="item.title"
+            class="news__item"
+          >
             <figure class="news__thumbnail" />
             <div class="news__body">
-              <h3 class="news__title">Lorem, ipsum dolor.</h3>
-              <p class="news__date">2018.11.11</p>
-              <p class="news__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore alias nam ipsa minima, repellat sint tempora vitae non. Nisi voluptates quisquam nobis numquam? Assumenda commodi suscipit rem excepturi perferendis?</p>
-            </div>
-          </li>
-          <li class="news__item">
-            <figure class="news__thumbnail" />
-            <div class="news__body">
-              <h3 class="news__title">Lorem, ipsum dolor.</h3>
-              <p class="news__date">2018.11.11</p>
-              <p class="news__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore alias nam ipsa minima, repellat sint tempora vitae non. Nisi voluptates quisquam nobis numquam? Assumenda commodi suscipit rem excepturi perferendis?</p>
-            </div>
-          </li>
-          <li class="news__item">
-            <figure class="news__thumbnail" />
-            <div class="news__body">
-              <h3 class="news__title">Lorem, ipsum dolor.</h3>
-              <p class="news__date">2018.11.11</p>
+              <h3 class="news__title">{{ item.title }}</h3>
+              <p class="news__date">{{ item.date }}</p>
               <p class="news__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique inventore alias nam ipsa minima, repellat sint tempora vitae non. Nisi voluptates quisquam nobis numquam? Assumenda commodi suscipit rem excepturi perferendis?</p>
             </div>
           </li>
@@ -195,7 +183,7 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="hdg">FAQ</h2>
+        <h2 class="hdg">FAQ {{ test }}</h2>
 
         <no-ssr>
           <tabs>
@@ -254,12 +242,30 @@ import axios from 'axios'
 export default {
   async asyncData({ params }) {
     const { data } = await axios.get(`https://reqres.in/api/users/2`)
-    return data
+    const user = data.data
+    return {
+      user
+    }
   },
 
   data: function() {
     return {
+      test: 1111,
       activeFaq: 0,
+      news: [
+        {
+          title: 'xxxx 1',
+          date: new Date()
+        },
+        {
+          title: 'xxxx 2',
+          date: new Date()
+        },
+        {
+          title: 'xxxx 3',
+          date: new Date()
+        }
+      ],
       faq: [
         {
           q: 'faq1',

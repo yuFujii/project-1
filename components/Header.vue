@@ -16,6 +16,7 @@
         >
           <nuxt-link to="/">Top</nuxt-link>
           <nuxt-link to="/about">About</nuxt-link>
+          <nuxt-link to="/users">Users</nuxt-link>
           <span class="disabled">Recruit</span>
           <span class="disabled">Contact</span>
         </nav>
